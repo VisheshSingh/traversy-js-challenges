@@ -1,5 +1,14 @@
-export function arrayReplace(inputArray: number[], elemToReplace: number, substitutionElem: number): number[] {
-
+export function arrayReplace(
+  inputArray: number[],
+  elemToReplace: number,
+  substitutionElem: number
+): number[] {
+  inputArray.forEach((item, i) => {
+    if (item === elemToReplace) {
+      inputArray[i] = substitutionElem;
+    }
+  });
+  return inputArray;
 }
 
-// console.log(arrayReplace([1, 2, 1], 1, 3));
+console.log(arrayReplace([1, 2, 1], 1, 3));
